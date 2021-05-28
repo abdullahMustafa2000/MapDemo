@@ -117,7 +117,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     public void startSearchActivity(List<Place.Field> fields) {
-        Toast.makeText(this, "clicked search bar", Toast.LENGTH_SHORT).show();
         Intent intent = new Autocomplete.IntentBuilder(AutocompleteActivityMode.OVERLAY, fields)
                 .build(this);
         startActivityForResult(intent, AUTOCOMPLETE_REQUEST_CODE);
